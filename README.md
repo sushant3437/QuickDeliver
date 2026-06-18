@@ -15,16 +15,26 @@ The system uses JWT-based authentication and role-based access control to separa
 
 QuickDeliver follows a simple full-stack request flow:
 
-```mermaid
-flowchart LR
-	A[React Frontend] --> B[Axios API Requests]
-	B --> C[Node.js / Express Backend]
-	C --> D[Authentication and Business Logic]
-	D --> E[Mongoose Models]
-	E --> F[MongoDB Database]
+```text
+React Frontend
+	|
+	v
+Axios API Requests
+	|
+	v
+Node.js / Express Backend
+	|
+	v
+Authentication and Business Logic
+	|
+	v
+Mongoose Models
+	|
+	v
+MongoDB Database
 ```
 
-The frontend sends API requests through Axios, the backend processes authentication and business rules, and Mongoose handles data access to MongoDB.
+The frontend sends requests through Axios, the backend handles authentication and business rules, and Mongoose manages data access to MongoDB.
 
 ## Customer Features
 
