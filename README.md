@@ -11,6 +11,21 @@ The application is split into two parts:
 
 The system uses JWT-based authentication and role-based access control to separate customer and admin capabilities.
 
+## System Architecture
+
+QuickDeliver follows a simple full-stack request flow:
+
+```mermaid
+flowchart LR
+	A[React Frontend] --> B[Axios API Requests]
+	B --> C[Node.js / Express Backend]
+	C --> D[Authentication and Business Logic]
+	D --> E[Mongoose Models]
+	E --> F[MongoDB Database]
+```
+
+The frontend sends API requests through Axios, the backend processes authentication and business rules, and Mongoose handles data access to MongoDB.
+
 ## Customer Features
 
 - Register and log in to the platform.
